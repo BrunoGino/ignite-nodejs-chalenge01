@@ -3,7 +3,7 @@ import { ICreateUserDTO, IUsersRepository } from "../IUsersRepository";
 
 class UsersRepository implements IUsersRepository {
   private static INSTANCE: UsersRepository;
-  private users: User[];
+  private readonly users: User[];
 
   private constructor() {
     this.users = [];
@@ -53,7 +53,7 @@ class UsersRepository implements IUsersRepository {
   }
 
   list(): User[] {
-    // Complete aqui
+    return this.users;
   }
 }
 

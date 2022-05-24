@@ -5,13 +5,14 @@ class User {
   readonly id: string;
   admin: boolean;
   updated_at: Date;
-  private name: string;
-  private created_at: Date;
+  name: string;
+  created_at: Date;
 
   constructor() {
     if (!this.id) {
       this.id = uuidV4();
     }
+    this.admin = false;
   }
 }
 
